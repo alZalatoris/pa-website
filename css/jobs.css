@@ -49,13 +49,15 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   line-height: 1;
   font-weight: 400;
   min-height: 100vh;
   background: linear-gradient(#4671ea, #ac34e7);
+}
+
+.header-center {
+  display: flex;
+  gap: 5rem;
 }
 
 .input-container {
@@ -78,8 +80,20 @@ body {
 /* Style the input fields */
 .input-field {
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
+  border: 1px solid #bfbfbf;
+  border-radius: 0.3rem;
   outline: none;
+}
+
+/* .input-field:focus {
+  border: 2px solid #112655;
+} */
+
+.input-field:is(:focus) {
+  border-color: #112655;
+  border-width: 1px;
+  /* padding: 1.6rem; */
 }
 
 .input-title {
@@ -184,12 +198,16 @@ form {
 }
 
 .section-job-create h2 {
-  color: #4671ea;
+  color: #112655;
   font-size: 2.4rem;
   font-weight: 600;
   text-align: center;
   margin: 4.8rem;
   text-transform: uppercase;
+}
+
+input {
+  box-shadow: none;
 }
 
 textarea {
@@ -205,7 +223,7 @@ textarea {
 
 textarea:is(:focus, :valid) {
   border-color: #112655;
-  border-width: 2px;
+  border-width: 1px;
   padding: 1.6rem;
 }
 
