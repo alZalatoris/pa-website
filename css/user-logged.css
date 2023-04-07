@@ -1,0 +1,138 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM 
+
+- FONT SIZE (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights: 
+Default: 400
+Medium: 500
+Semi-Bold: 600
+Bold: 700
+
+Default: 1
+- Line heights: 
+1.05
+1.6
+
+--- 02 COLORS
+
+Primary: #112655;
+- Tints: #1864ab;
+- Shades: #0c1e42;
+- Accents:
+- Greys: 
+#555;
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+Default: 0.5rem;
+
+--- 07 WHITESPACE
+
+- SPACING (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.header-center {
+  display: flex;
+  gap: 5rem;
+}
+
+.section-job-ad {
+  height: 60rem;
+}
+
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.section-job-ad--all {
+  background-image: linear-gradient(
+      rgb(34, 34, 34, 0.85),
+      rgb(34, 34, 34, 0.85)
+    ),
+    url(../img/job-ads/webpage.jpg);
+  background-size: cover;
+}
+
+.section-job-ad--new {
+  background-image: linear-gradient(
+      rgb(34, 34, 34, 0.85),
+      rgb(34, 34, 34, 0.85)
+    ),
+    url(../img/job-ads/create-job-ad.jpg);
+  background-size: cover;
+}
+
+.section-job-ad--all:hover {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.85), rgb(0, 0, 0, 0.85)),
+    url(../img/job-ads/webpage.jpg);
+  background-size: cover;
+}
+
+.section-job-ad--new:hover {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.85), rgb(0, 0, 0, 0.85)),
+    url(../img/job-ads/create-job-ad.jpg);
+  background-size: cover;
+}
+
+.btn-job-ad:link,
+.btn-job-ad:visited {
+  color: #fff;
+  text-align: center;
+  width: 30rem;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 500;
+  background-color: #0c1e42;
+  border-radius: 0.5rem;
+  padding: 3.2rem 1.6rem;
+}
+
+.section-job-ad--all,
+.section-job-ad--new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-job-ad:hover {
+  box-shadow: 0 2.4rem 4.8rem rgba(17, 38, 85, 0.1);
+  background-color: #112655;
+}
+
+.btn-job-ad:active {
+  transform: translateY(2px);
+}
+
+.autosizable_textarea {
+  overflow: hidden;
+  resize: none;
+}
+
+.input-area:hover,
+.input-area:focus {
+  border-color: #000;
+}
