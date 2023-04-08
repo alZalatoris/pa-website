@@ -1,0 +1,275 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM 
+
+- FONT SIZE (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights: 
+Default: 400
+Medium: 500
+Semi-Bold: 600
+Bold: 700
+
+Default: 1
+- Line heights: 
+1.05
+1.6
+
+--- 02 COLORS
+
+Primary: #112655;
+- Tints: #1864ab;
+- Shades: #0c1e42;
+- Accents:
+- Greys: 
+#555;
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+Default: 0.5rem;
+
+--- 07 WHITESPACE
+
+- SPACING (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Because we want header to be sticky later */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  background-color: rgb(265, 265, 265, 0.97);
+}
+
+.header-center {
+  display: flex;
+  gap: 5rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  left: 0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.list-item {
+  list-style: none;
+}
+
+.nav-lang {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.nav-lang:hover,
+.nav-lang:active,
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #21438d;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #112655;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #21438d;
+}
+
+.main-nav-link.nav-cta:active {
+  transform: translateY(0.2rem);
+}
+
+.pa-logo-main {
+  height: 6rem;
+  /* padding: 1rem 3rem 1rem 0rem; */
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  gap: 4.8rem;
+  flex-direction: column;
+  padding: 6.4rem 3.2rem 4.8rem 4.8rem;
+  background-color: #112655;
+  color: #fff;
+}
+
+.footer-primary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+}
+
+.footer-secondary {
+  font-size: 1.2rem;
+  text-align: left;
+  background-color: #112655;
+  color: #a5d8ff;
+}
+
+.footer-header {
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding-bottom: 1.8rem;
+  text-transform: uppercase;
+}
+
+.footer--details {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.sm-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-contacts,
+.footer-info,
+.footer-policy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer--sm {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-start;
+}
+
+.section-hero {
+  background-image: linear-gradient(
+      rgb(34, 34, 34, 0.85),
+      rgb(34, 34, 34, 0.85)
+    ),
+    url(../img/hero-1.jpg);
+  background-size: cover;
+}
+
+.section-hero {
+  padding: 10rem;
+}
+
+.form-my-profile {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-profile--update {
+  width: 50%;
+  background-color: #21438d;
+  color: #fff;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.a-change-psw {
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-login {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+  padding: 3.2rem 2.4rem 4.8rem 2.4rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    rgb(265, 265, 265, 0.85),
+    rgb(265, 265, 265, 0.85)
+  );
+  color: #112655;
+}
+
+.h2-hero {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#name,
+#phone,
+#email,
+#password,
+#psw-enter,
+#psw-repeat {
+  width: 100%;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+#password {
+  margin-bottom: 3.4rem;
+}
+
+.footer--cookies,
+.footer--privacy-policy {
+  cursor: pointer;
+}
