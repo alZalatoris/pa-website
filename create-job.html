@@ -34,7 +34,7 @@
       <div class="header-center">
         <ul class="center">
           <li class="list-item">
-            <a class="main-nav-link" href="#about">Mano profilis</a>
+            <a class="main-nav-link" href="my-profile.html">Mano profilis</a>
           </li>
         </ul>
         <ul class="center">
@@ -182,6 +182,7 @@
               required
             ></textarea>
           </div>
+
           <div class="grid-row">
             <label for="job-company-offer" class="input-title input-area-left"
               >Įmonė siūlo</label
@@ -196,6 +197,7 @@
               required
             ></textarea>
           </div>
+
           <div class="grid-salary">
             <label for="job-salary input-area" class="input-title grid-col-1"
               >Atlyginimas €/mėn</label
@@ -228,6 +230,20 @@
               <option>Po mokęsčių</option>
               <option>Prieš mokęsčius</option>
             </select>
+          </div>
+          <div class="grid-row">
+            <label for="about-company" class="input-title input-area-left"
+              >Apie įmonę</label
+            >
+            <textarea
+              id="about-company"
+              class="input-area-right"
+              oninvalid="this.setCustomValidity('Aprašykite darbo reikalavimus')"
+              onchange="try{setCustomValidity('')}catch(e){};"
+              x-moz-errormessage="Aprašykite darbo reikalavimus"
+              spellcheck="true"
+              required
+            ></textarea>
           </div>
           <div class="grid-calendar">
             <label for="start" class="grid-calendar-left"
