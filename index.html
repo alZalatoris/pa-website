@@ -23,7 +23,7 @@
   <body>
     <header>
       <div class="header">
-        <ul class="main-nav-list">
+        <ul class="main-nav-list list--no-decoration">
           <li>
             <div class="nav-img-box">
               <a href="#"
@@ -36,37 +36,43 @@
           </li>
         </ul>
         <ul class="center">
-          <li class="list-item">
-            <a class="main-nav-link" href="#about">Apie mus</a>
+          <li class="list--no-decoration">
+            <a class="main-nav-link" href="#empty">Apie mus</a>
           </li>
-          <li class="list-item">
-            <a class="main-nav-link" href="#">Klientams</a>
+          <li class="list--no-decoration">
+            <a class="main-nav-link" href="clients.html">Klientams</a>
           </li>
-          <li class="list-item">
+          <li class="list--no-decoration">
             <a class="main-nav-link" href="#job-reqs">Darbo pasiūlymai</a>
           </li>
-          <li class="list-item">
-            <a class="main-nav-link" href="#">Paslaugos</a>
+          <li class="list--no-decoration">
+            <div class="main-nav-link dropdown">
+              <div class="dropbtn">Paslaugos</div>
+              <div class="dropdown-content">
+                <a href="services-1.html">Atrankos</a>
+                <a href="services-2.html">Tyrimai</a>
+              </div>
+            </div>
           </li>
-          <li class="list-item">
+          <li class="list--no-decoration">
             <a class="main-nav-link" href="login.html">Prisijungti</a>
           </li>
-          <li class="list-item">
-            <a class="main-nav-link nav-cta" href="#">Susisiekime</a>
+          <li class="list--no-decoration">
+            <a class="main-nav-link nav-cta" href="#section-cta">Susisiekime</a>
           </li>
         </ul>
         <ul class="nav-lang">
-          <li class="list-item">
+          <li class="list--no-decoration">
             <a class="main-nav-link nav-lang" href="#">LT</a>
           </li>
-          <li class="list-item">
+          <li class="list--no-decoration">
             <a class="main-nav-link nav-lang" href="#">EN</a>
           </li>
         </ul>
       </div>
       <section class="section-hero">
-        <div class="header-container">
-          <div class="header-container-inner">
+        <div class="sticky-attach">
+          <div class="hero-container-inner">
             <h1 class="h1-hero">
               Aukštos kvalifikacijos specialistų paieška ir atrankos
             </h1>
@@ -74,11 +80,12 @@
               Organizacijų psichologai prisidedantys prie jūsų įmonės augimo
               darbuotojų pritraukime ir išlaikyme
             </p>
-            <a href="#" class="btn">Atrankų sritys</a>
+            <a href="#section-industries-list" class="btn">Atrankų sritys</a>
           </div>
         </div>
       </section>
     </header>
+    <section class="empty-div"><div id="empty"></div></section>
     <section class="about">
       <h1 class="h1-about" id="about">Apie Personalo Akademiją</h1>
       <p class="p-about">
@@ -112,14 +119,11 @@
             class="job-img"
             alt="Computer with presentation of digital communication"
           />
-          <!-- <div class="job-tags">
-            <span class="tag">SEO</span>
-          </div> -->
           <div class="job-card-content">
             <p class="job-title">
               Skaitmeninės komunikacijos specialisto (-ės)
             </p>
-            <ul class="job-attributes">
+            <ul class="job-attributes list--no-decoration">
               <li class="job-attribute">
                 <ion-icon name="location" class="job-icon"></ion-icon>
                 <div class="job-location">Vilnius</div>
@@ -134,7 +138,7 @@
               </li>
             </ul>
             <div class="job-select">
-              <a href="#" class="job-btn">Plačiau</a>
+              <a href="job-ad.html" class="job-btn">Plačiau</a>
             </div>
           </div>
         </div>
@@ -163,7 +167,7 @@
               </li>
             </ul>
             <div class="job-select">
-              <a href="#" class="job-btn">Plačiau</a>
+              <a href="job-ad.html" class="job-btn">Plačiau</a>
             </div>
           </div>
         </div>
@@ -190,97 +194,97 @@
               </li>
             </ul>
             <div class="job-select">
-              <a href="#" class="job-btn">Plačiau</a>
+              <a href="job-ad.html" class="job-btn">Plačiau</a>
             </div>
           </div>
         </div>
       </div>
       <div class="job-select">
-        <a href="#" class="job-all-btn">Žiūrėti visus</a>
+        <a href="job-ad-list.html" class="job-all-btn">Žiūrėti visus</a>
       </div>
     </section>
     <section class="section-industries grid-col-2">
       <div class="section-industries-pics">
         <div class="section-industries-grid">
           <div class="ul ul-industries-grid">
-            <li class="industry-grid-item--1 li-item">
+            <li class="industry-grid-item--1 li-item list--no-decoration">
               <img
                 src="img/industries/el-engineer.jpg"
                 alt="Electric Engineer"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--2 li-item">
+            <li class="industry-grid-item--2 li-item list--no-decoration">
               <img
                 src="img/industries/servers.jpg"
                 alt="Server Room"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--3 li-item">
+            <li class="industry-grid-item--3 li-item list--no-decoration">
               <img
                 src="img/industries/finance.jpg"
                 alt="Office building"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--4 li-item">
+            <li class="industry-grid-item--4 li-item list--no-decoration">
               <img
                 src="img/industries/d-marketing.jpg"
                 alt="Marketers writing"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--5 li-item">
+            <li class="industry-grid-item--5 li-item list--no-decoration">
               <img
                 src="img/industries/programmer.jpg"
                 alt="Coders on computer screens"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--6 li-item">
+            <li class="industry-grid-item--6 li-item list--no-decoration">
               <img
                 src="img/industries/building-engineer.jpg"
                 alt="Construction Engineer"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--7 li-item">
+            <li class="industry-grid-item--7 li-item list--no-decoration">
               <img
                 src="img/industries/designer.jpg"
                 alt="Designer on the computer"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--8 li-item">
+            <li class="industry-grid-item--8 li-item list--no-decoration">
               <img
                 src="img/industries/hw-engineer.jpg"
                 alt="Hardware Engineer welding"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--9 li-item">
+            <li class="industry-grid-item--9 li-item list--no-decoration">
               <img
                 src="img/industries/manager.jpg"
                 alt="Manager having a video call"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--10 li-item">
+            <li class="industry-grid-item--10 li-item list--no-decoration">
               <img
                 src="img/industries/welding.jpg"
                 alt="Welder on the work table"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--11 li-item">
+            <li class="industry-grid-item--11 li-item list--no-decoration">
               <img
                 src="img/industries/cons-engineers.jpg"
                 alt="Construction Engineer with a plan"
                 class="industry-grid-pic"
               />
             </li>
-            <li class="industry-grid-item--12 li-item">
+            <li class="industry-grid-item--12 li-item list--no-decoration">
               <img
                 src="img/industries/manufacture.jpg"
                 alt="Manufacturer on his worokstation"
@@ -290,7 +294,7 @@
           </div>
         </div>
       </div>
-      <div class="section-industries-list">
+      <div class="section-industries-list" id="section-industries-list">
         <h1 class="h1-industries--spec">
           Atrankų
           <span class="section-industries--spec">specializacija</span>
@@ -343,7 +347,7 @@
         </ul>
       </div>
     </section>
-    <section class="value-icons">
+    <div class="value-icons">
       <div class="value-icon">
         <ion-icon name="bulb" class="value-icon-attribute"></ion-icon>
       </div>
@@ -353,7 +357,7 @@
       <div class="value-icon">
         <ion-icon name="infinite" class="value-icon-attribute"></ion-icon>
       </div>
-    </section>
+    </div>
     <section class="section-values grid-col-3">
       <div class="grid-value">
         <h1 class="h1-value">Kūrybiškumas</h1>
@@ -406,7 +410,7 @@
         <img src="img/cust-logos/helso.png" alt="Helso Logo" />
       </div>
     </section>
-    <section class="section-cta">
+    <section class="section-cta" id="section-cta">
       <div class="container">
         <div class="cta">
           <div class="cta-text-box">
@@ -502,7 +506,7 @@
           <h2 class="footer-header">Politika</h2>
           <p class="footer--details footer--cookies">Slapukai</p>
           <p class="footer--details footer--privacy-policy">
-            Privatumo politika
+            <a href="/privacy.html" class="footer-link">Privatumo politika</a>
           </p>
         </div>
       </div>

@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personalo Akademija | Darbo skelbimai</title>
     <link rel="icon" href="img/apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/login-style.css" />
-    <link rel="stylesheet" href="css/jobs.css" />
+    <link rel="stylesheet" href="css/create-job.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +17,7 @@
   <body>
     <div class="header">
       <div class="header-logo">
-        <ul class="main-nav-list">
+        <ul class="main-nav-list list--no-decoration">
           <li>
             <div class="nav-img-box">
               <a href="index.html"
@@ -32,26 +31,24 @@
         </ul>
       </div>
       <div class="header-center">
-        <ul class="center">
+        <ul class="center list--no-decoration">
           <li class="list-item">
             <a class="main-nav-link" href="my-profile.html">Mano profilis</a>
           </li>
         </ul>
         <ul class="center">
-          <li class="list-item">
-            <a class="main-nav-link" href="#about"
-              >info@personaloakademija.lt</a
-            >
+          <li class="list-item list--no-decoration">
+            <p class="main-nav-profile">info@personaloakademija.lt</p>
           </li>
         </ul>
-        <ul class="center">
+        <ul class="center list--no-decoration">
           <li class="list-item">
             <a class="main-nav-link" href="#about">Atsijungti</a>
           </li>
         </ul>
       </div>
       <div class="header-nav">
-        <ul class="nav-lang">
+        <ul class="nav-lang list--no-decoration">
           <li class="list-item">
             <a class="main-nav-link nav-lang" href="#">LT</a>
           </li>
@@ -63,7 +60,7 @@
     </div>
     <section>
       <div class="section-job-create">
-        <h2 class="h2-job-ad-create">Darbo skelbimas</h2>
+        <h2>Darbo skelbimas</h2>
         <form action="action.php" class="job-ad">
           <div class="grid-row">
             <label for="full-name" class="input-title grid-i-left"
@@ -294,7 +291,9 @@
           </div>
 
           <div class="grid-row">
-            <a href="#" class="preview-job-ad">Peržiūrėti prieš skelbiant</a>
+            <a href="#popup" class="preview-job-ad"
+              >Peržiūrėti prieš skelbiant</a
+            >
           </div>
           <div class="grid-row">
             <input type="submit" class="btn-submit" value="Skelbti" />
@@ -302,6 +301,84 @@
         </form>
       </div>
     </section>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__content--internals">
+          <a href="#" class="popup__close">&times;</a>
+          <h1 class="popup__h1--popup">Pardavimų vadybininkas (-ė)</h1>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left">Darbo vieta:</span>
+            <span class="popup__span--popup-right">Vilnius</span>
+          </div>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left">Darbo sritis:</span>
+            <span class="popup__span--popup-right">Pardavimai</span>
+          </div>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left">Darbo pobūdis:</span>
+            <span class="popup__span--popup-right"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              sequi ex libero quia hic voluptates, impedit repudiandae autem
+              excepturi quidem necessitatibus nulla, consequatur facilis.
+              Assumenda numquam similique hic illum magni? Lorem ipsum dolor sit
+              amet consectetur, adipisicing elit. Assumenda quo iste officia
+              officiis reiciendis totam, dignissimos deserunt aut perspiciatis
+              laboriosam?</span
+            >
+          </div>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left">Reikalavimai:</span>
+            <span class="popup__span--popup-right"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              sequi ex libero quia hic voluptates, impedit repudiandae autem
+              excepturi quidem necessitatibus nulla, consequatur facilis.
+              Assumenda numquam similique hic illum magni? Lorem ipsum dolor sit
+              amet consectetur, adipisicing elit. Assumenda quo iste officia
+              officiis reiciendis totam, dignissimos deserunt aut perspiciatis
+              laboriosam?</span
+            >
+          </div>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left">Įmonė siūlo:</span>
+            <span class="popup__span--popup-right"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              sequi ex libero quia hic voluptates, impedit repudiandae autem
+              excepturi quidem necessitatibus nulla, consequatur facilis.
+              Assumenda numquam similique hic illum magni? Lorem ipsum dolor sit
+              amet consectetur, adipisicing elit. Assumenda quo iste officia
+              officiis reiciendis totam, dignissimos deserunt aut perspiciatis
+              laboriosam?</span
+            >
+          </div>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left">Atlyginimas:</span>
+            <span class="popup__span--popup-right">2500€ prieš mokęsčius</span>
+          </div>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left">Apie įmonę:</span>
+            <span class="popup__span--popup-right"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              sequi ex libero quia hic voluptates, impedit repudiandae autem
+              excepturi quidem necessitatibus nulla, consequatur facilis.
+            </span>
+          </div>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left">Galioja iki:</span>
+            <span class="popup__span--popup-right">2023-07-15</span>
+          </div>
+          <div class="popup__p--popup">
+            <span class="popup__span--popup-left"
+              >Baigiantis galiojimui siųsti priminimą:</span
+            >
+            <span class="popup__span--popup-right"
+              >info@personaloakademija.lt</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="footer-primary">
         <div class="footer-contacts">
@@ -337,7 +414,7 @@
           <h2 class="footer-header">Politika</h2>
           <p class="footer--details footer--cookies">Slapukai</p>
           <p class="footer--details footer--privacy-policy">
-            Privatumo politika
+            <a href="/privacy.html" class="footer-link">Privatumo politika</a>
           </p>
         </div>
       </div>

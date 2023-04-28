@@ -22,7 +22,7 @@ Primary: #112655;
 - Tints: #1864ab;
 - Shades: #0c1e42;
 - Accents:
-- Greys: 
+- Greys: #d0ebff;
 #555;
 
 --- 05 SHADOWS
@@ -49,8 +49,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1;
   font-weight: 400;
+  line-height: 1;
   color: #555;
 }
 
@@ -62,8 +62,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 4.8rem;
   height: 9.6rem;
+  padding: 0 4.8rem;
   background-color: rgb(265, 265, 265, 0.97);
 }
 
@@ -100,16 +100,12 @@ body {
 .nav-lang:hover,
 .nav-lang:active,
 .main-nav-link:hover,
-.main-nav-link:active,
-.btn-apply:hover,
-.btn-apply:active {
+.main-nav-link:active {
   color: #21438d;
 }
 
 .main-nav-link.nav-cta:link,
-.main-nav-link.nav-cta:visited,
-.btn-apply:link,
-.btn-apply:visited {
+.main-nav-link.nav-cta:visited {
   padding: 1.2rem 2.4rem;
   border-radius: 5px;
   background-color: #112655;
@@ -117,9 +113,7 @@ body {
 }
 
 .main-nav-link.nav-cta:hover,
-.main-nav-link.nav-cta:active,
-.btn-apply:hover,
-.btn-apply:active {
+.main-nav-link.nav-cta:active {
   background-color: #21438d;
 }
 
@@ -130,6 +124,19 @@ body {
 .pa-logo-main {
   height: 8.2rem;
   cursor: pointer;
+}
+
+.sticky {
+  padding: 0 inherit;
+  height: 9.6rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #555;
+  z-index: 10;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
 
 .dropdown {
@@ -168,114 +175,207 @@ body {
 }
 
 /*********************/
-/* SECTION */
+/* HERO */
 /*********************/
 
 .section-hero {
-  background-image: linear-gradient(
-      rgb(34, 34, 34, 0.85),
-      rgb(34, 34, 34, 0.85)
-    ),
-    url(../img/hero-1.jpg);
-  background-size: cover;
+  background-color: #0c1e42;
 }
 
-.section-hero {
-  padding: 10rem;
+.h3-job-ad {
+  padding-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #a5d8ff;
 }
 
-.card-login {
+.p-job-ad {
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+  color: #d0ebff;
+}
+
+.h1-hero {
+  padding: 7.2rem;
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.empty {
+  padding: 7.8rem 0 0 0;
+  background-color: #0c1e42;
+}
+
+.job-ads-filter,
+.section-change-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding-bottom: 4.2rem;
+  background-color: #0c1e42;
+}
+
+.ja-filter-container {
+  display: flex;
+  gap: 8rem;
+  padding-bottom: 3.2rem;
+}
+
+.job-ad-keyword,
+.job-ad-location,
+.job-ad-job-field {
+  border-radius: 0.5rem;
+}
+
+.ja-location,
+.ja-keyword,
+.ja-job-field {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding: 3.2rem 2.4rem 4.8rem 2.4rem;
-  width: 30%;
+}
+
+input,
+select {
+  padding: 1.2rem 1.2rem 1.2rem 1.4rem;
+  height: 4.8rem;
+  width: 22rem;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.job-all-btn:link,
+.job-all-btn:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
   border-radius: 0.5rem;
-  background-image: linear-gradient(
-    rgb(265, 265, 265, 0.85),
-    rgb(265, 265, 265, 0.85)
-  );
-  color: #112655;
-}
-
-.h2-hero {
-  text-align: center;
-  text-transform: uppercase;
   font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-}
-
-#email,
-#password {
-  margin: 0.5rem auto;
-  padding: 1rem;
-  width: 80%;
-  border: none;
-  border-radius: 5px;
-}
-
-#password {
-  margin-bottom: 3.4rem;
-}
-
-.label-field {
-  margin: 0.5rem auto;
-  padding-top: 1.4rem;
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.btn--sign-in,
-.btn--remind-pswd,
-.btn--register {
-  margin: 0.5rem auto;
-  padding: 1rem;
-  width: 80%;
-  text-align: center;
-  border-radius: 5px;
-  font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
   background-color: #112655;
   color: #fff;
-  cursor: pointer;
 }
 
-.btn--sign-in:link,
-.btn--remind-pswd:link,
-.btn--register:link,
-.btn--sign-in:visited,
-.btn--remind-pswd:visited,
-.btn--register:visited {
-  transition: all 0.3s;
-}
-
-.btn--sign-in:hover,
-.btn--remind-pswd:hover,
-.btn--register:hover {
+.job-all-btn:hover {
   background-color: #21438d;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
 }
 
-input {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
+.section-job-ads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  padding: 1%;
+  background-color: #0c1e42;
 }
 
-.btn--remind-pswd:active,
-.btn--sign-in:active,
-.btn--register:active {
-  transform: translateY(3px);
+.job-ad-card {
+  display: flex;
+  flex-direction: column;
 }
 
-.footer--cookies,
-.footer--privacy-policy {
+.flex-item {
+  margin: 0 auto;
+  flex-basis: 30%;
+  margin-bottom: 5rem;
+  padding: 6rem;
+  position: relative;
+  border-radius: 5px;
+  background-color: rgb(17, 38, 85);
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(17, 0, 0, 0.03);
   cursor: pointer;
 }
 
-.footer-link {
-  text-decoration: none;
+.link {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 100;
+}
+
+.flex-item:hover,
+.flex-item:link,
+.flex-item:visited {
+  background-color: #21438d;
+}
+
+.h1-job-ad {
+  padding-bottom: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
   color: #fff;
+}
+
+.job-ads-page-list {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.section-change-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.job-ads-paging-list {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.job-list-page,
+.job-list-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 2px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #fff;
+  color: #112655;
+}
+
+.job-page-active,
+.job-list-page:hover {
+  background-color: #21438d;
+  color: #fff;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(17, 0, 0, 0.03);
+}
+
+div .job-list-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.3rem;
+  background-color: #0c1e42;
+  color: #fff;
+  cursor: auto;
+}
+
+.page-change-icon {
+  height: 6.2rem;
+  width: 6.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.page-change-icon:hover {
+  color: #d0ebff;
+}
+
+.job-list-page:active,
+.page-change-icon:active {
+  color: #a5d8ff;
+  transform: translateY(0.2rem);
 }
 
 /*********************/

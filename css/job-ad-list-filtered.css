@@ -38,8 +38,8 @@ Default: 0.5rem;
 */
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -49,37 +49,36 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1;
   font-weight: 400;
+  line-height: 1;
   color: #555;
 }
 
+/*********************/
+/* NAVIGATION */
+/*********************/
+
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  /* Because we want header to be sticky later */
+  justify-content: space-between;
   height: 9.6rem;
   padding: 0 4.8rem;
   background-color: rgb(265, 265, 265, 0.97);
 }
 
-.main-nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 3.2rem;
-  left: 0;
-}
-
+.main-nav-list,
 .center {
   display: flex;
   align-items: center;
   gap: 3.2rem;
 }
 
-.list-item {
+.main-nav-list {
+  left: 0;
+}
+
+.list--no-decoration {
   list-style: none;
 }
 
@@ -91,10 +90,10 @@ body {
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
   font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #555;
   transition: all 0.3s;
 }
 
@@ -109,8 +108,8 @@ body {
 .main-nav-link.nav-cta:visited {
   padding: 1.2rem 2.4rem;
   border-radius: 5px;
-  color: #fff;
   background-color: #112655;
+  color: #fff;
 }
 
 .main-nav-link.nav-cta:hover,
@@ -127,15 +126,71 @@ body {
   cursor: pointer;
 }
 
+.sticky {
+  padding: 0 inherit;
+  height: 9.6rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #555;
+  z-index: 10;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 3px;
+  background-color: #112655;
+  min-width: 16rem;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 1.2rem 1.6rem;
+  display: block;
+  border-radius: 3px;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+
+.dropdown-content a:hover {
+  background-color: #21438d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/*********************/
+/* HERO */
+/*********************/
+
 .section-hero {
   background-color: #0c1e42;
 }
 
 .h3-job-ad {
+  padding-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.3px;
-  padding-bottom: 0.8rem;
   color: #a5d8ff;
 }
 
@@ -146,21 +201,26 @@ body {
 }
 
 .h1-hero {
+  padding: 7.2rem;
+  text-align: center;
   font-size: 4.8rem;
   font-weight: 600;
   color: #fff;
-  text-align: center;
-  padding: 7.2rem;
+}
+
+.empty {
+  padding: 7.8rem 0 0 0;
+  background-color: #0c1e42;
 }
 
 .job-ads-filter,
 .section-change-page {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   gap: 3.2rem;
-  background-color: #0c1e42;
   padding-bottom: 4.2rem;
+  background-color: #0c1e42;
 }
 
 .ja-filter-container {
@@ -182,25 +242,41 @@ body {
   flex-direction: column;
 }
 
+.filter-remove {
+  display: flex;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #a5d8ff;
+  transition: 0.2s all;
+}
+
+.filter-remove:hover {
+  transform: scale(1.25);
+}
+
+.icon-rm {
+  padding-right: 0.4rem;
+}
+
 input,
 select {
+  padding: 1.2rem 1.2rem 1.2rem 1.4rem;
   height: 4.8rem;
   width: 22rem;
-  padding: 1.2rem 1.2rem 1.2rem 1.4rem;
   text-align: left;
   font-size: 1.6rem;
 }
 
 .job-all-btn:link,
 .job-all-btn:visited {
-  font-size: 1.8rem;
-  font-weight: 600;
-  background-color: #112655;
-  color: #fff;
-  text-decoration: none;
   display: inline-block;
   padding: 1.6rem 3.2rem;
   border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #112655;
+  color: #fff;
 }
 
 .job-all-btn:hover {
@@ -208,7 +284,6 @@ select {
 }
 
 .section-job-ads {
-  background-color: #fff;
   display: flex;
   flex-wrap: wrap;
   gap: 1%;
@@ -224,21 +299,21 @@ select {
 .flex-item {
   margin: 0 auto;
   flex-basis: 30%;
-  padding: 6rem;
-  background-color: rgb(17, 38, 85);
-  border-radius: 5px;
   margin-bottom: 5rem;
-  cursor: pointer;
-  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(17, 0, 0, 0.03);
+  padding: 6rem;
   position: relative;
+  border-radius: 5px;
+  background-color: rgb(17, 38, 85);
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(17, 0, 0, 0.03);
+  cursor: pointer;
 }
 
 .link {
-  position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
+  position: absolute;
   z-index: 100;
 }
 
@@ -249,12 +324,12 @@ select {
 }
 
 .h1-job-ad {
+  padding-bottom: 2.4rem;
   font-size: 2.4rem;
   font-weight: 600;
-  letter-spacing: 0.1rem;
   line-height: 1.2;
+  letter-spacing: 0.1rem;
   color: #fff;
-  padding-bottom: 2.4rem;
 }
 
 .job-ads-page-list {
@@ -279,14 +354,14 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 2px;
   font-size: 1.8rem;
   font-weight: 500;
-  color: #112655;
   cursor: pointer;
-  width: 3.2rem;
-  height: 3.2rem;
   background-color: #fff;
-  border-radius: 2px;
+  color: #112655;
 }
 
 .job-page-active,
@@ -300,8 +375,8 @@ div .job-list-dots {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0c1e42;
   letter-spacing: 0.3rem;
+  background-color: #0c1e42;
   color: #fff;
   cursor: auto;
 }
@@ -323,10 +398,14 @@ div .job-list-dots {
   transform: translateY(0.2rem);
 }
 
+/*********************/
+/* FOOTER */
+/*********************/
+
 .footer {
   display: flex;
-  gap: 4.8rem;
   flex-direction: column;
+  gap: 4.8rem;
   padding: 6.4rem 3.2rem 4.8rem 4.8rem;
   background-color: #112655;
   color: #fff;
@@ -339,22 +418,29 @@ div .job-list-dots {
 }
 
 .footer-secondary {
-  font-size: 1.2rem;
   text-align: left;
+  font-size: 1.2rem;
   background-color: #112655;
   color: #a5d8ff;
 }
 
 .footer-header {
-  font-size: 2.4rem;
-  font-weight: 500;
   padding-bottom: 1.8rem;
   text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .footer--details {
   font-size: 1.4rem;
   line-height: 1.8;
+}
+
+.sm-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #fff;
+  cursor: pointer;
 }
 
 .footer-contacts,
@@ -367,11 +453,16 @@ div .job-list-dots {
 
 .footer--sm {
   display: flex;
-  gap: 0.8rem;
   justify-content: flex-start;
+  gap: 0.8rem;
 }
 
 .footer--cookies,
 .footer--privacy-policy {
   cursor: pointer;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
 }

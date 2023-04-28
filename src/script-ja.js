@@ -1,6 +1,6 @@
 "use script";
 
-const sectionHeroEl = document.querySelector(".sticky-attach");
+const sectionHeroEl = document.querySelector(".job-ad-top");
 
 const obs = new IntersectionObserver(
   function (entries) {
@@ -16,7 +16,7 @@ const obs = new IntersectionObserver(
   {
     root: null,
     threshold: 0,
-    rootMargin: "-80px",
+    rootMargin: "-330px",
   }
 );
 

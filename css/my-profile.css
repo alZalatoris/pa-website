@@ -38,8 +38,8 @@ Default: 0.5rem;
 */
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -54,37 +54,33 @@ body {
   color: #555;
 }
 
+/*********************/
+/* HEADER */
+/*********************/
+
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  /* Because we want header to be sticky later */
-  height: 9.6rem;
+  justify-content: space-between;
   padding: 0 4.8rem;
+  height: 9.6rem;
   background-color: rgb(265, 265, 265, 0.97);
 }
 
 .header-center {
   display: flex;
-  gap: 5rem;
+  align-items: center;
+  gap: 3.2rem;
 }
 
 .main-nav-list {
-  list-style: none;
   display: flex;
   align-items: center;
   gap: 3.2rem;
   left: 0;
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  gap: 3.2rem;
-}
-
-.list-item {
+.list--no-decoration {
   list-style: none;
 }
 
@@ -94,32 +90,39 @@ body {
 }
 
 .main-nav-link:link,
-.main-nav-link:visited {
+.main-nav-link:visited,
+.main-nav-profile {
   display: inline-block;
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
   font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #555;
   transition: all 0.3s;
 }
 
 .nav-lang:hover,
 .nav-lang:active,
 .main-nav-link:hover,
-.main-nav-link:active {
+.main-nav-link:active,
+.btn-apply:hover,
+.btn-apply:active {
   color: #21438d;
 }
 
 .main-nav-link.nav-cta:link,
-.main-nav-link.nav-cta:visited {
+.main-nav-link.nav-cta:visited,
+.btn-apply:link,
+.btn-apply:visited {
   padding: 1.2rem 2.4rem;
   border-radius: 5px;
-  color: #fff;
   background-color: #112655;
+  color: #fff;
 }
 
 .main-nav-link.nav-cta:hover,
-.main-nav-link.nav-cta:active {
+.main-nav-link.nav-cta:active,
+.btn-apply:hover,
+.btn-apply:active {
   background-color: #21438d;
 }
 
@@ -132,10 +135,95 @@ body {
   cursor: pointer;
 }
 
+/*********************/
+/* SECTION */
+/*********************/
+
+.section-hero {
+  padding: 10rem;
+  background-image: linear-gradient(
+      rgb(34, 34, 34, 0.85),
+      rgb(34, 34, 34, 0.85)
+    ),
+    url(../img/hero-1.jpg);
+  background-size: cover;
+}
+
+.card-login {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 3.2rem 2.4rem 4.8rem 2.4rem;
+  width: 30%;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    rgb(265, 265, 265, 0.85),
+    rgb(265, 265, 265, 0.85)
+  );
+  color: #112655;
+}
+
+.form-my-profile {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.2rem;
+}
+
+.h2-hero {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.flex-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-profile--update {
+  margin: 2.4rem auto 0.5rem auto;
+  padding: 1rem;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  background-color: #21438d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.a-change-psw {
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+#name,
+#phone,
+#email,
+#password,
+#psw-enter,
+#psw-repeat {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+#password {
+  margin-bottom: 3.4rem;
+}
+
+/*********************/
+/* FOOTER */
+/*********************/
+
 .footer {
   display: flex;
-  gap: 4.8rem;
   flex-direction: column;
+  gap: 4.8rem;
   padding: 6.4rem 3.2rem 4.8rem 4.8rem;
   background-color: #112655;
   color: #fff;
@@ -148,17 +236,17 @@ body {
 }
 
 .footer-secondary {
-  font-size: 1.2rem;
   text-align: left;
+  font-size: 1.2rem;
   background-color: #112655;
   color: #a5d8ff;
 }
 
 .footer-header {
-  font-size: 2.4rem;
-  font-weight: 500;
   padding-bottom: 1.8rem;
   text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .footer--details {
@@ -183,92 +271,16 @@ body {
 
 .footer--sm {
   display: flex;
-  gap: 0.8rem;
   justify-content: flex-start;
-}
-
-.section-hero {
-  background-image: linear-gradient(
-      rgb(34, 34, 34, 0.85),
-      rgb(34, 34, 34, 0.85)
-    ),
-    url(../img/hero-1.jpg);
-  background-size: cover;
-}
-
-.section-hero {
-  padding: 10rem;
-}
-
-.form-my-profile {
-  margin-top: 3.2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-item-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-profile--update {
-  width: 50%;
-  background-color: #21438d;
-  color: #fff;
-  margin: 0.5rem auto;
-  padding: 1rem;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  margin-top: 3rem;
-}
-
-.a-change-psw {
-  margin-top: 1rem;
-  text-align: center;
-  text-decoration: none;
-}
-
-.card-login {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin: 0 auto;
-  padding: 3.2rem 2.4rem 4.8rem 2.4rem;
-  border-radius: 0.5rem;
-  background-image: linear-gradient(
-    rgb(265, 265, 265, 0.85),
-    rgb(265, 265, 265, 0.85)
-  );
-  color: #112655;
-}
-
-.h2-hero {
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-#name,
-#phone,
-#email,
-#password,
-#psw-enter,
-#psw-repeat {
-  width: 100%;
-  margin: 0.5rem auto;
-  padding: 1rem;
-  border-radius: 5px;
-  border: none;
-}
-
-#password {
-  margin-bottom: 3.4rem;
+  gap: 0.8rem;
 }
 
 .footer--cookies,
 .footer--privacy-policy {
   cursor: pointer;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
 }

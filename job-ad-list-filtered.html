@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personalo Akademija | Prisijungti</title>
     <link rel="icon" href="img/apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/job-ad-list.css" />
+    <link rel="stylesheet" href="css/job-ad-list-filtered.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +36,9 @@
           <a class="main-nav-link" href="clients.html">Klientams</a>
         </li>
         <li class="list-item">
-          <a class="main-nav-link nav-cta" href="#job-reqs">Darbo pasiūlymai</a>
+          <a class="main-nav-link nav-cta" href="job-ad-list.html"
+            >Darbo pasiūlymai</a
+          >
         </li>
         <li class="list--no-decoration">
           <div class="main-nav-link dropdown">
@@ -71,12 +73,7 @@
       <div class="ja-filter-container">
         <div class="ja-keyword">
           <label for="keyword"></label>
-          <input
-            type="text"
-            id="keyword"
-            class="job-ad-keyword"
-            placeholder="Pagal raktinį žodį"
-          />
+          <input type="text" id="keyword" class="job-ad-keyword" value="Java" />
         </div>
         <div class="ja-location">
           <label for="location-select"></label>
@@ -87,7 +84,7 @@
             class="job-ad-location"
           >
             <option value="">-- Pasirinkti miestą --</option>
-            <option value="Vilnius">Vilnius</option>
+            <option value="Vilnius" selected>Vilnius</option>
             <option value="Kaunas">Kaunas</option>
             <option value="Klaipėda">Klaipėda</option>
             <option value="Šiauliai">Šiauliai</option>
@@ -112,7 +109,7 @@
             <option value="Finansai">Finansai</option>
             <option value="Interjeras">Interjeras / Dizainas</option>
             <option value="Gamybos technologijos">Gamybos technologijos</option>
-            <option value="IT">IT</option>
+            <option value="IT" selected>IT</option>
             <option value="Mechanika">Mechanika</option>
             <option value="Užsienis">Užsienis</option>
             <option value="Kita">Kita</option>
@@ -120,16 +117,22 @@
         </div>
       </div>
       <div class="job-ads-btn">
-        <a href="job-ad-list-filtered.html" class="job-all-btn">Filtruoti</a>
+        <a href="#" class="filter-remove"
+          ><ion-icon name="close-outline" class="icon-rm"></ion-icon>Naikinti
+          filtrus</a
+        >
+      </div>
+      <div class="job-ads-btn">
+        <a href="#" class="job-all-btn">Filtruoti</a>
       </div>
     </div>
 
     <section class="section-job-ads">
       <div class="flex-item-1 flex-item">
         <div class="job-ad-card">
-          <h1 class="h1-job-ad">Pardavimų vadybininkas (-ė)</h1>
+          <h1 class="h1-job-ad">Product Owner</h1>
           <h3 class="h3-job-ad">Vilnius</h3>
-          <p class="p-job-ad">1500€ - 2500€ prieš mokesčius</p>
+          <p class="p-job-ad">4500€ - 5000€ prieš mokesčius</p>
           <a href="job-ad.html">
             <span class="link"></span>
           </a>
@@ -137,12 +140,10 @@
       </div>
       <div class="flex-item-2 flex-item">
         <div class="job-ad-card">
-          <h1 class="h1-job-ad">
-            Gelžbetoninių konstrukcijų projektuotojas-konstruktorius
-          </h1>
+          <h1 class="h1-job-ad">Java programuotojas (-a)</h1>
           <h3 class="h3-job-ad">Vilnius | Kaunas</h3>
         </div>
-        <p class="p-job-ad">2000€ po mokesčių</p>
+        <p class="p-job-ad">3000€ po mokesčių</p>
         <a href="job-ad.html">
           <span class="link"></span>
         </a>
@@ -150,7 +151,7 @@
       <div class="flex-item-3 flex-item">
         <div class="job-ad-card">
           <h1 class="h1-job-ad">IT Analitikas (-ė)</h1>
-          <h3 class="h3-job-ad">Kaunas</h3>
+          <h3 class="h3-job-ad">Vilnius</h3>
           <p class="p-job-ad">1700€ prieš mokesčius</p>
           <a href="job-ad.html">
             <span class="link"></span>
@@ -159,9 +160,9 @@
       </div>
       <div class="flex-item-4 flex-item">
         <div class="job-ad-card">
-          <h1 class="h1-job-ad">Vyr. Finansų Konsultantas (-ė)</h1>
-          <h3 class="h3-job-ad">Alytus</h3>
-          <p class="p-job-ad">2500€-3000€ prieš mokesčius</p>
+          <h1 class="h1-job-ad">Junior Software Engineer</h1>
+          <h3 class="h3-job-ad">Vilnius</h3>
+          <p class="p-job-ad">1500€ - 2000€ prieš mokesčius</p>
           <a href="job-ad.html">
             <span class="link"></span>
           </a>
@@ -169,53 +170,19 @@
       </div>
       <div class="flex-item-5 flex-item">
         <div class="job-ad-card">
-          <h1 class="h1-job-ad">
-            ŠVOK Sistemų projektuotojas - inžinierius (-ė)
-          </h1>
+          <h1 class="h1-job-ad">Vyr. Java Programuotojas (-a)</h1>
           <h3 class="h3-job-ad">Vilnius</h3>
-          <p class="p-job-ad">2250€ prieš mokesčius</p>
+          <p class="p-job-ad">5500€ - 6000€ prieš mokesčius</p>
           <a href="job-ad.html">
             <span class="link"></span>
           </a>
         </div>
       </div>
-      <div class="flex-item-6 flex-item">
+      <div class="flex-item-5 flex-item invisible">
         <div class="job-ad-card">
-          <h1 class="h1-job-ad">Vyr suvirintojas (-a)</h1>
-          <h3 class="h3-job-ad">Šiauliai</h3>
-          <p class="p-job-ad">2500€ prieš mokesčius</p>
-          <a href="job-ad.html">
-            <span class="link"></span>
-          </a>
-        </div>
-      </div>
-      <div class="flex-item-7 flex-item">
-        <div class="job-ad-card">
-          <h1 class="h1-job-ad">Senior Software Engineer (Java)</h1>
-          <h3 class="h3-job-ad">Vilnius | Kaunas | Klaipėda</h3>
-          <p class="p-job-ad">3500€ - 5500€ prieš mokesčius</p>
-          <a href="job-ad.html">
-            <span class="link"></span>
-          </a>
-        </div>
-      </div>
-      <div class="flex-item-8 flex-item">
-        <div class="job-ad-card">
-          <h1 class="h1-job-ad">Santechnikas (-ė)</h1>
-          <h3 class="h3-job-ad">Užsienis, Švedija</h3>
-          <p class="p-job-ad">4000€ prieš mokesčius</p>
-          <a href="job-ad.html">
-            <span class="link"></span>
-          </a>
-        </div>
-      </div>
-      <div class="flex-item-9 flex-item">
-        <div class="job-ad-card">
-          <h1 class="h1-job-ad">
-            Metalo apdirbimo instrumentų pardavimų vadybininkas (-ė)
-          </h1>
-          <h3 class="h3-job-ad">Panevėžys</h3>
-          <p class="p-job-ad">1500€ - 2500€ prieš mokesčius</p>
+          <h1 class="h1-job-ad">Junior Software Engineer</h1>
+          <h3 class="h3-job-ad">Vilnius</h3>
+          <p class="p-job-ad">1500€ - 2000€ prieš mokesčius</p>
           <a href="job-ad.html">
             <span class="link"></span>
           </a>
@@ -226,10 +193,6 @@
       <ion-icon name="chevron-back-outline" class="page-change-icon"></ion-icon>
       <div class="job-ads-paging-list">
         <div class="job-list-page job-page-active">1</div>
-        <div class="job-list-page">2</div>
-        <div class="job-list-page">3</div>
-        <div class="job-list-dots">...</div>
-        <div class="job-list-page">4</div>
       </div>
       <ion-icon
         name="chevron-forward-outline"

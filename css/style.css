@@ -38,8 +38,8 @@ Default: 0.5rem;
 */
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -49,8 +49,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1;
   font-weight: 400;
+  line-height: 1;
   color: #555;
 }
 
@@ -60,35 +60,13 @@ body {
   row-gap: 0 auto;
 }
 
-.pa-logo-main {
-  height: 8.2rem;
-  cursor: pointer;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 8rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: #fff;
-  z-index: 10;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
-}
-
-/* .section-hero {
-  margin-top: 9.6rem;
-} */
-
 /*********************/
 /* HEADER */
 /*********************/
+
 header {
   height: 100vh;
   position: relative;
-
   background-image: linear-gradient(
       rgb(34, 34, 34, 0.85),
       rgb(34, 34, 34, 0.85)
@@ -97,50 +75,41 @@ header {
   background-size: cover;
 }
 
-.header-container {
+.hero-container {
+  padding: 0 4.8rem;
   width: 120rem;
   position: absolute;
-  padding-left: 4.8rem;
-  /* left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
-  /* text-align: center; */
 }
 
-.header-container-inner {
-  width: 70%;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  /* Because we want header to be sticky later */
-  height: 9.6rem;
-  padding: 0 4.8rem;
-  background-color: rgb(265, 265, 265, 0.97);
+.hero-container-inner {
+  padding-left: 3.2rem;
 }
 
 /*********************/
 /* NAVIGATION */
 /*********************/
 
-.main-nav-list {
-  list-style: none;
+.header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 3.2rem;
-  left: 0;
+  padding: 0 4.8rem;
+  height: 9.6rem;
+  background-color: rgb(265, 265, 265, 0.97);
 }
 
+.main-nav-list,
 .center {
   display: flex;
   align-items: center;
   gap: 3.2rem;
 }
 
-.list-item {
+.main-nav-list {
+  left: 0;
+}
+
+.list--no-decoration {
   list-style: none;
 }
 
@@ -152,10 +121,10 @@ header {
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
   font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #555;
   transition: all 0.3s;
 }
 
@@ -170,8 +139,8 @@ header {
 .main-nav-link.nav-cta:visited {
   padding: 1.2rem 2.4rem;
   border-radius: 5px;
-  color: #fff;
   background-color: #112655;
+  color: #fff;
 }
 
 .main-nav-link.nav-cta:hover,
@@ -183,40 +152,95 @@ header {
   transform: translateY(0.2rem);
 }
 
+.pa-logo-main {
+  height: 8.2rem;
+  cursor: pointer;
+}
+
+.sticky {
+  padding: 0 inherit;
+  height: 9.6rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #555;
+  z-index: 10;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 3px;
+  background-color: #112655;
+  min-width: 16rem;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 1.2rem 1.6rem;
+  display: block;
+  border-radius: 3px;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+
+.dropdown-content a:hover {
+  background-color: #21438d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /*********************/
 /* HERO SECTION */
 /*********************/
 
 .h1-hero {
+  margin: 3.2rem 0 3.2rem 0;
+  width: 70%;
   font-size: 4.6rem;
-  font-weight: 600;
   line-height: 1.3;
-  margin-bottom: 3.2rem;
+  font-weight: 600;
   color: #fff;
 }
 
 .p-hero {
-  font-size: 2.8rem;
+  margin-bottom: 8.2rem;
+  width: 55%;
+  font-size: 2.4rem;
   line-height: 1.6;
-  margin-bottom: 12rem;
   color: #fff;
 }
 
 .btn:link,
 .btn:visited {
-  font-size: 1.8rem;
-  font-weight: 600;
-  background-color: #112655;
-  color: #fff;
-  text-decoration: none;
   display: inline-block;
   padding: 1.6rem 3.2rem;
   border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #112655;
+  color: #fff;
 }
 
 .btn:active {
-  transition: all 0.3s;
   transform: translateY(0.4rem);
+  transition: all 0.3s;
 }
 
 .btn:hover {
@@ -225,16 +249,16 @@ header {
 }
 
 section {
-  padding: 7.2rem 3rem;
+  padding: 6.4rem 3.2rem;
 }
 
 .h1-about {
-  color: #112655;
-  padding-bottom: 3rem;
-  font-size: 3.2rem;
-  font-weight: 500;
+  padding-bottom: 3.2rem;
   text-align: center;
   text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #112655;
 }
 
 .p-about {
@@ -247,29 +271,15 @@ section {
   background-color: #112655;
 }
 
-.grid-col-3 {
-  display: grid;
-  gap: 9.6rem;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-}
-
-.grid-col-2 {
-  display: grid;
-  gap: 9.6rem;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
-}
-
 .facts-item--1,
 .facts-item--2,
 .facts-item--3 {
   display: flex;
-  color: #fff;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   gap: 3rem;
+  color: #fff;
 }
 
 .h1-facts {
@@ -282,25 +292,37 @@ section {
   line-height: 1.6;
 }
 
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.4rem;
+}
+
 .h1-hottest-jobs {
+  padding: 6.4rem 0 4.8rem 0;
+  text-align: center;
   font-size: 5.2rem;
   font-weight: 600;
-  padding-bottom: 3rem;
-  text-align: center;
   color: rgb(17, 38, 85);
 }
 
 .job {
-  box-shadow: 0 2.4rem 4.8rem rgba(17, 38, 85, 0.1);
-  border-radius: 0.6rem;
   overflow: hidden;
+  border-radius: 0.6rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(17, 38, 85, 0.1);
 }
 
 .p-hottest-jobs {
+  padding-bottom: 4.8rem;
   font-size: 2rem;
   line-height: 1.6;
   text-align: center;
-  padding-bottom: 3rem;
 }
 
 .job {
@@ -310,31 +332,29 @@ section {
 }
 
 .job-title {
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: #112655;
-  font-weight: 600;
-  line-height: 1.25;
-  /* padding: 2rem 0 4rem 0; */
   margin: 1.8rem 1rem 2.4rem 1rem;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #112655;
 }
 
 .job-attributes {
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
   padding-left: 3.2rem;
 }
 
 .job-attribute {
-  font-size: 1.4rem;
   display: flex;
   justify-content: left;
   align-items: center;
   gap: 1rem;
+  font-size: 1.4rem;
 }
 
 .job-icon {
@@ -351,27 +371,27 @@ section {
 }
 
 .job-btn {
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
 }
 
 .job-btn:link,
 .job-all-btn:link,
 .job-btn:visited,
 .job-all-btn:visited {
-  font-size: 1.8rem;
-  font-weight: 600;
-  background-color: #112655;
-  color: #fff;
-  text-decoration: none;
   display: inline-block;
   padding: 1.6rem 3.2rem;
   border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #112655;
+  color: #fff;
 }
 
 .job-btn:active,
 .job-all-btn:active {
-  transition: all 0.3s;
   transform: translateY(0.4rem);
+  transition: all 0.3s;
 }
 
 .job-btn:hover,
@@ -381,11 +401,12 @@ section {
 }
 
 .job-all-btn {
-  margin: 4.8rem 4.8rem 2rem 4.8rem;
+  margin: 4.8rem 4.8rem 1.2rem 4.8rem;
 }
 
 .section-industries {
-  background-image: linear-gradient(rgb(34, 34, 34, 0.9), rgb(34, 34, 34, 0.9)),
+  padding-left: 6.4rem;
+  background-image: linear-gradient(rgb(34, 34, 34, 0.9), rgb(34, 34, 34, 0.95)),
     url(../img/industries/vno-oldtown.jpg);
   background-size: cover;
 }
@@ -397,20 +418,16 @@ section {
 }
 
 .h1-industries--spec {
+  padding: 3.2rem 3.2rem 6.4rem 3.2rem;
+  text-align: center;
   font-size: 5.2rem;
   font-weight: 600;
-  padding: 3.2rem;
-  text-align: center;
+  line-height: 1.2;
+  color: #fff;
 }
 
 .section-industries--spec {
   color: #1864ab;
-}
-
-.h1-industries--spec {
-  padding-bottom: 4.8rem;
-  line-height: 1.2;
-  color: #fff;
 }
 
 .section-industries-list {
@@ -428,9 +445,8 @@ section {
 
 .industries-spec-attribute {
   display: flex;
-  gap: 2.4rem;
   align-items: center;
-  list-style: none;
+  gap: 2.4rem;
   font-size: 1.8rem;
 }
 
@@ -440,13 +456,9 @@ section {
 }
 
 .logo-industry {
-  color: #1864ab;
   height: 2.8rem;
   width: 2.8rem;
-}
-
-.section-industries-pics {
-  margin: 0 auto;
+  color: #1864ab;
 }
 
 .section-industries-grid {
@@ -461,20 +473,15 @@ section {
   gap: 3rem;
 }
 
-.li-item {
-  list-style: none;
-}
-
 .industry-grid-pic {
   width: 100%;
   height: 100%;
+  border-radius: 0.2rem;
   object-fit: cover;
   opacity: 0.6;
-  border-radius: 0.2rem;
-  /* box-shadow: 0.2rem 0.2rem 0.9rem 0.3rem rgba(256, 256, 256, 1); */
 }
 
-section.value-icons {
+.value-icons {
   padding: 7.2rem 3rem 0rem 3rem;
 }
 
@@ -492,11 +499,10 @@ section.value-icons {
   height: 3.2rem;
   width: 3.2rem;
   color: #112655;
-  /* text-align: center; */
 }
 
 section.section-values.grid-col-3 {
-  padding: 3.2rem 0rem;
+  padding: 3.2rem 0;
 }
 
 .grid-value {
@@ -509,11 +515,11 @@ section.section-values.grid-col-3 {
 }
 
 .h1-value {
+  margin-bottom: 3.2rem;
+  text-align: center;
   font-size: 5.2rem;
   font-weight: 600;
-  margin-bottom: 3.2rem;
   color: #112655;
-  text-align: center;
 }
 
 .p-value {
@@ -522,27 +528,27 @@ section.section-values.grid-col-3 {
 }
 
 .section-testimonials {
-  margin: 9.8rem auto;
-  width: 100rem;
-  background-color: #112655;
-  padding: 3.2rem 4.8rem 3.2rem 10.8rem;
-  border-radius: 0.5rem;
-  position: relative;
-
   display: flex;
   align-items: center;
   gap: 8.6rem;
+  margin: 9.8rem auto;
+  padding: 3.2rem 4.8rem 3.2rem 10.8rem;
+  width: 100rem;
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: #112655;
 }
 
 .testimonial-text {
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.5;
   margin-bottom: 3.2rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 500;
   color: #e7f5ff;
 }
 
 .testimonial-author {
+  margin-bottom: 0.8rem;
   font-size: 1.4rem;
   color: #a5d8ff;
 }
@@ -564,30 +570,28 @@ section.section-values.grid-col-3 {
 /*********************/
 
 .btn-testimonial {
-  background-color: #fff;
-  border: none;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  position: absolute;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 
 .btn-icon--left {
-  left: 0;
   top: 50%;
+  left: 0;
   transform: translate(-50%, -50%);
 }
 
 .btn-icon--right {
-  right: 0;
   top: 50%;
+  right: 0;
   transform: translate(50%, -50%);
 }
 
@@ -598,21 +602,20 @@ section.section-values.grid-col-3 {
 }
 
 .dots {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 4.8rem);
-
   display: flex;
   gap: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 4.8rem);
 }
 
 .dot {
   height: 1.2rem;
   width: 1.2rem;
-  background-color: #fff;
   border: 2px solid #112655;
   border-radius: 50%;
+  background-color: #fff;
   cursor: pointer;
 }
 
@@ -621,24 +624,23 @@ section.section-values.grid-col-3 {
 }
 
 .section-customers {
-  padding: 4.8rem 0 3.2rem 0;
+  padding: 6.4rem 0 3.2rem 0;
 }
 
 .heading-customers {
-  font-size: 3.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-  text-align: center;
   margin-bottom: 3.2rem;
-  color: #112655;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #112655;
 }
 
 .logos {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 }
 
 .logos img {
@@ -652,7 +654,6 @@ section.section-values.grid-col-3 {
 /*********************/
 
 .section-cta {
-  /* padding: 9.6rem 0; */
   display: flex;
   justify-content: center;
 }
@@ -660,31 +661,29 @@ section.section-values.grid-col-3 {
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: #112655;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  height: 57rem;
   border-radius: 5px;
   overflow: hidden;
-
-  /* grid-template-rows: ; */
-  height: 57rem;
+  background-color: #112655;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
 }
 
 .cta-text-box {
-  color: #e7f5ff;
   padding: 1.4rem 1.2rem;
+  color: #e7f5ff;
 }
 
 .heading-secondary {
+  padding: 3rem 0 4.8rem 0;
+  text-align: center;
   font-size: 3.2rem;
   letter-spacing: 0.05rem;
-  padding: 3rem;
-  text-align: center;
 }
 
 .cta-text {
+  padding: 0 3rem 3rem;
   font-size: 1.8rem;
   line-height: 1.4;
-  padding: 0 3rem 3rem;
 }
 
 .cta-img-box {
@@ -705,24 +704,24 @@ section.section-values.grid-col-3 {
 
 .cta-form label {
   display: block;
+  margin-bottom: 1.4rem;
   font-size: 1.6rem;
   font-weight: 500;
-  margin-bottom: 1.4rem;
 }
 .cta-form input {
-  width: 100%;
   padding: 1.2rem;
-  font-size: 1.6rem;
+  width: 100%;
   border-radius: 0.5rem;
+  font-size: 1.6rem;
 }
 
 .cta-form textarea {
-  width: 100%;
+  margin-bottom: 2.8rem;
   padding: 1.2rem;
-  font-size: 1.6rem;
+  width: 100%;
   border-radius: 0.5rem;
   font-family: "Poppins";
-  margin-bottom: 2.8rem;
+  font-size: 1.6rem;
 }
 
 .question {
@@ -730,15 +729,15 @@ section.section-values.grid-col-3 {
 }
 
 .btn-ask {
-  font-size: 1.8rem;
-  font-weight: 600;
-  background-color: #fff;
-  color: #112655;
-  border: none;
-  text-decoration: none;
+  margin: 0.5rem 0;
   padding: 1.8rem 5.8rem 1.8rem 5.8rem;
   border-radius: 0.5rem;
-  margin: 0.5rem 0;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #fff;
+  color: #112655;
   cursor: pointer;
 }
 
@@ -757,10 +756,14 @@ section.section-values.grid-col-3 {
   transition: all 0.2s;
 }
 
+/*********************/
+/* FOOTER */
+/*********************/
+
 .footer {
   display: flex;
-  gap: 4.8rem;
   flex-direction: column;
+  gap: 4.8rem;
   padding: 6.4rem 3.2rem 4.8rem 4.8rem;
   background-color: #112655;
   color: #fff;
@@ -773,17 +776,17 @@ section.section-values.grid-col-3 {
 }
 
 .footer-secondary {
-  font-size: 1.2rem;
   text-align: left;
+  font-size: 1.2rem;
   background-color: #112655;
   color: #a5d8ff;
 }
 
 .footer-header {
-  font-size: 2.4rem;
-  font-weight: 500;
   padding-bottom: 1.8rem;
   text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .footer--details {
@@ -808,11 +811,16 @@ section.section-values.grid-col-3 {
 
 .footer--sm {
   display: flex;
-  gap: 0.8rem;
   justify-content: flex-start;
+  gap: 0.8rem;
 }
 
 .footer--cookies,
 .footer--privacy-policy {
   cursor: pointer;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
 }
