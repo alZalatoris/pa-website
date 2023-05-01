@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalo Akademija | Prisijungti</title>
+    <link rel="icon" href="img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/job-ad-list-admin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <ul class="main-nav-list list--no-decoration">
+        <li>
+          <div class="nav-img-box">
+            <a href="index.html"
+              ><img
+                src="img/pa-blue-logo.png"
+                alt="Personalo Akademija logo"
+                class="pa-logo-main"
+            /></a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-center">
+        <ul class="center list--no-decoration">
+          <li class="list-item">
+            <a class="main-nav-link nav-cta" href="job-ad-list.html"
+              >Skelbimai</a
+            >
+          </li>
+        </ul>
+        <ul class="center list--no-decoration">
+          <li class="list-item">
+            <a class="main-nav-link" href="my-profile.html">Mano profilis</a>
+          </li>
+        </ul>
+        <ul class="center list--no-decoration">
+          <li class="list-item">
+            <p class="main-nav-profile">info@personaloakademija.lt</p>
+          </li>
+        </ul>
+        <ul class="center list--no-decoration">
+          <li class="list-item">
+            <a class="main-nav-link" href="index.html">Atsijungti</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="nav-lang list--no-decoration">
+        <li class="list-item">
+          <a class="main-nav-link nav-lang" href="#">LT</a>
+        </li>
+        <li class="list-item">
+          <a class="main-nav-link nav-lang" href="#">EN</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="empty sticky-attach"></div>
+
+    <section class="section-hero">
+      <h1 class="h1-hero">Karjera - per pora paspaudimų</h1>
+    </section>
+
+    <div class="job-ads-filter">
+      <div class="ja-filter-container">
+        <div class="ja-keyword">
+          <label for="keyword"></label>
+          <input
+            type="text"
+            id="keyword"
+            class="job-ad-keyword"
+            placeholder="Pagal raktinį žodį"
+          />
+        </div>
+        <div class="ja-location">
+          <label for="location-select"></label>
+
+          <select
+            name="ja-location"
+            id="location-select"
+            class="job-ad-location"
+          >
+            <option value="">-- Pasirinkti miestą --</option>
+            <option value="Vilnius">Vilnius</option>
+            <option value="Kaunas">Kaunas</option>
+            <option value="Klaipėda">Klaipėda</option>
+            <option value="Šiauliai">Šiauliai</option>
+            <option value="Panevėžys">Panevėžys</option>
+            <option value="Alytus">Alytus</option>
+            <option value="Užsienis">Užsienis</option>
+            <option value="Kita">Kita</option>
+          </select>
+        </div>
+        <div class="ja-job-field">
+          <label for="location-select"></label>
+          <select
+            name="ja-location"
+            id="location-select"
+            class="job-ad-job-field"
+          >
+            <option value="">-- Darbo sritis --</option>
+            <option value="Administravimas">
+              Administravimas / Sekretoriavimas
+            </option>
+            <option value="Architektūra">Architektūra</option>
+            <option value="Finansai">Finansai</option>
+            <option value="Interjeras">Interjeras / Dizainas</option>
+            <option value="Gamybos technologijos">Gamybos technologijos</option>
+            <option value="IT">IT</option>
+            <option value="Mechanika">Mechanika</option>
+            <option value="Užsienis">Užsienis</option>
+            <option value="Kita">Kita</option>
+          </select>
+        </div>
+      </div>
+      <div class="job-ads-btn">
+        <a href="job-ad-list-filtered.html" class="job-all-btn">Filtruoti</a>
+      </div>
+    </div>
+
+    <section class="section-job-ads">
+      <div class="flex-item-1 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">Pardavimų vadybininkas (-ė)</h1>
+          <h3 class="h3-job-ad">Vilnius</h3>
+          <p class="p-job-ad">1500€ - 2500€ prieš mokesčius</p>
+          <a href="job-ad.html">
+            <span class="link"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex-item-2 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">
+            Gelžbetoninių konstrukcijų projektuotojas-konstruktorius
+          </h1>
+          <h3 class="h3-job-ad">Vilnius | Kaunas</h3>
+        </div>
+        <p class="p-job-ad">2000€ po mokesčių</p>
+        <a href="job-ad.html">
+          <span class="link"></span>
+        </a>
+      </div>
+      <div class="flex-item-3 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">IT Analitikas (-ė)</h1>
+          <h3 class="h3-job-ad">Kaunas</h3>
+          <p class="p-job-ad">1700€ prieš mokesčius</p>
+          <a href="job-ad.html">
+            <span class="link"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex-item-4 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">Vyr. Finansų Konsultantas (-ė)</h1>
+          <h3 class="h3-job-ad">Alytus</h3>
+          <p class="p-job-ad">2500€-3000€ prieš mokesčius</p>
+          <a href="job-ad.html">
+            <span class="link"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex-item-5 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">
+            ŠVOK Sistemų projektuotojas - inžinierius (-ė)
+          </h1>
+          <h3 class="h3-job-ad">Vilnius</h3>
+          <p class="p-job-ad">2250€ prieš mokesčius</p>
+          <a href="job-ad.html">
+            <span class="link"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex-item-6 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">Vyr suvirintojas (-a)</h1>
+          <h3 class="h3-job-ad">Šiauliai</h3>
+          <p class="p-job-ad">2500€ prieš mokesčius</p>
+          <a href="job-ad.html">
+            <span class="link"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex-item-7 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">Senior Software Engineer (Java)</h1>
+          <h3 class="h3-job-ad">Vilnius | Kaunas | Klaipėda</h3>
+          <p class="p-job-ad">3500€ - 5500€ prieš mokesčius</p>
+          <a href="job-ad.html">
+            <span class="link"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex-item-8 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">Santechnikas (-ė)</h1>
+          <h3 class="h3-job-ad">Užsienis, Švedija</h3>
+          <p class="p-job-ad">4000€ prieš mokesčius</p>
+          <a href="job-ad.html">
+            <span class="link"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex-item-9 flex-item">
+        <div class="job-ad-card">
+          <h1 class="h1-job-ad">
+            Metalo apdirbimo instrumentų pardavimų vadybininkas (-ė)
+          </h1>
+          <h3 class="h3-job-ad">Panevėžys</h3>
+          <p class="p-job-ad">1500€ - 2500€ prieš mokesčius</p>
+          <a href="job-ad.html">
+            <span class="link"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section-change-page">
+      <ion-icon name="chevron-back-outline" class="page-change-icon"></ion-icon>
+      <div class="job-ads-paging-list">
+        <div class="job-list-page job-page-active">1</div>
+        <div class="job-list-page">2</div>
+        <div class="job-list-page">3</div>
+        <div class="job-list-dots">...</div>
+        <div class="job-list-page">4</div>
+      </div>
+      <ion-icon
+        name="chevron-forward-outline"
+        class="page-change-icon"
+      ></ion-icon>
+    </section>
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="footer-contacts">
+          <h2 class="footer-header">Kontaktai</h2>
+          <p class="phone footer--details">Tel. +37060748101</p>
+          <p class="email footer--details">
+            El. paštas: info@personaloakademija.lt
+          </p>
+          <p class="address footer--details">
+            Laisvės pr. 60, LT-05120 Vilnius
+          </p>
+          <div class="footer--sm">
+            <a href="https://www.linkedin.com/company/3854218/admin/"
+              ><ion-icon name="logo-linkedin" class="sm-icon"></ion-icon
+            ></a>
+            <a href="https://www.facebook.com/personaloakademija.lt"
+              ><ion-icon name="logo-facebook" class="sm-icon"></ion-icon
+            ></a>
+          </div>
+        </div>
+        <div class="footer-info">
+          <h2 class="footer-header">Rekvizitai</h2>
+          <p class="footer--details footer--company-code">
+            Įmonės kodas: 302572227
+          </p>
+          <p class="footer--details footer--gpm">PVM kodas: LT100005962411</p>
+          <p class="footer--details footer--account">
+            A/S LT697300010125104176
+          </p>
+          <p class="footer--details footer-bc">Banko kodas: 73000</p>
+        </div>
+        <div class="footer-policy">
+          <h2 class="footer-header">Politika</h2>
+          <p class="footer--details footer--cookies">Slapukai</p>
+          <p class="footer--details footer--privacy-policy">
+            <a href="/privacy.html" class="footer-link">Privatumo politika</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-secondary">
+        &copy; 2023 Personalo Akademija. Visos teisės saugomos. Privatumo ir
+        slapukų politika
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>

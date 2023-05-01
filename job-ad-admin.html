@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personalo Akademija | Prisijungti</title>
     <link rel="icon" href="img/apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/job-ad.css" />
+    <link rel="stylesheet" href="css/job-ad-admin.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +19,7 @@
       <ul class="main-nav-list list--no-decoration">
         <li>
           <div class="nav-img-box">
-            <a href="#"
+            <a href="index.html"
               ><img
                 src="img/pa-blue-logo.png"
                 alt="Personalo Akademija logo"
@@ -28,41 +28,40 @@
           </div>
         </li>
       </ul>
-      <ul class="center">
-        <li class="list--no-decoration">
-          <a class="main-nav-link" href="#empty">Apie mus</a>
-        </li>
-        <li class="list--no-decoration">
-          <a class="main-nav-link" href="clients.html">Klientams</a>
-        </li>
-        <li class="list--no-decoration">
-          <a class="main-nav-link" href="#job-reqs">Darbo pasiūlymai</a>
-        </li>
-        <li class="list--no-decoration">
-          <div class="main-nav-link dropdown">
-            <div class="dropbtn">Paslaugos</div>
-            <div class="dropdown-content">
-              <a href="services-1.html">Atrankos</a>
-              <a href="services-2.html">Tyrimai</a>
-            </div>
-          </div>
-        </li>
-        <li class="list--no-decoration">
-          <a class="main-nav-link" href="login.html">Prisijungti</a>
-        </li>
-        <li class="list--no-decoration">
-          <a class="main-nav-link nav-cta" href="#section-cta">Susisiekime</a>
-        </li>
-      </ul>
-      <ul class="nav-lang">
-        <li class="list--no-decoration">
+      <div class="header-center">
+        <ul class="center list--no-decoration">
+          <li class="list-item">
+            <a class="main-nav-link nav-cta" href="job-ad-list.html"
+              >Skelbimai</a
+            >
+          </li>
+        </ul>
+        <ul class="center list--no-decoration">
+          <li class="list-item">
+            <a class="main-nav-link" href="my-profile.html">Mano profilis</a>
+          </li>
+        </ul>
+        <ul class="center list--no-decoration">
+          <li class="list-item">
+            <p class="main-nav-profile">info@personaloakademija.lt</p>
+          </li>
+        </ul>
+        <ul class="center list--no-decoration">
+          <li class="list-item">
+            <a class="main-nav-link" href="index.html">Atsijungti</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="nav-lang list--no-decoration">
+        <li class="list-item">
           <a class="main-nav-link nav-lang" href="#">LT</a>
         </li>
-        <li class="list--no-decoration">
+        <li class="list-item">
           <a class="main-nav-link nav-lang" href="#">EN</a>
         </li>
       </ul>
     </div>
+
     <div class="empty sticky-attach"></div>
 
     <div class="job-ad-top">
@@ -75,9 +74,6 @@
         <div class="job-ad-salary">
           <ion-icon name="cash-outline" class="job-ad-icon"></ion-icon>
           <p class="job-salary">1500€ prieš mokesčius</p>
-        </div>
-        <div class="job-ad-apply">
-          <a href="#popup" class="btn-apply">Aplikuoti</a>
         </div>
       </div>
     </div>
@@ -158,65 +154,12 @@
         asperiores dolore enim, quam magni deserunt ex exercitationem expedita
         veritatis sed fugiat iure quae?
       </p>
-      <div class="job-ad-apply">
-        <a href="#popup" class="btn-apply">Aplikuoti</a>
-      </div>
     </div>
 
-    <div class="popup" id="popup">
-      <div class="popup__content">
-        <div class="popup__left">
-          <img
-            src="img/apply/apply.jpg"
-            alt="Woman on computer"
-            class="popup__img"
-          />
-        </div>
-        <div class="popup__right">
-          <a href="#" class="popup__close">&times;</a>
-          <h2 class="heading-secondary">Pardavimų vadybininkas (-ė)</h2>
-          <div class="upload-logo">
-            <p class="flex-u-left">Pridėti gyvenimo aprašymą</p>
+    <div class="job-ad-edit-delete">
+      <a href="#" class="btn-edit">Redaguoti</a>
 
-            <div class="flex-u-right">
-              <input
-                type="file"
-                id="actual-btn"
-                name="filename"
-                class="grid-u-logo-right"
-                hidden
-              />
-              <label for="actual-btn" class="btn-logo-upload">Įkelti CV</label>
-              <span class="file-chosen">Failas nepasirinktas</span>
-            </div>
-          </div>
-          <div class="popup--gdpr-text">
-            <p class="popup__text">
-              Kandidatuodamas (-a), sutinku 2 mėnesius nuo šiandien būti
-              Personalo akademijos duomenų bazėje, kol vyksta atranka į šias
-              pareigas.
-            </p>
-          </div>
-          <form>
-            <div class="popup--job-agreement">
-              <input
-                type="checkbox"
-                id="job-apply"
-                name="apply"
-                value="newsletter"
-              />
-              <label for="job-apply"
-                >Sutinku 12 mėnesių nuo šiandien iš Personalo akademijos gauti
-                naujus darbo pasiūlymus panašioms pareigoms ir panašioje veiklos
-                srityje kaip šiame darbo pasiūlyme.</label
-              >
-            </div>
-            <div class="job-ad-apply">
-              <button type="submit" class="popup--btn-apply">Aplikuoti</button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <a href="#" class="btn-delete">Trinti</a>
     </div>
 
     <footer class="footer">
